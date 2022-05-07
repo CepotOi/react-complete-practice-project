@@ -1,0 +1,24 @@
+.button {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: #9e2bff;
+  border: 1px solid #9e2bff;
+  color: #fff;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover,
+.button:active {
+  background: #7d00e6;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: auto;
+  }
+}
