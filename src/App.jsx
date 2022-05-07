@@ -1,9 +1,13 @@
-import UserInput from './components/UserInput/UserInput';
+import FormUser from './components/FormUser/FormUser';
 
 const App = () => {
+  const addUserHandler = userData => {
+    console.log(userData);
+  };
+
   return (
     <>
-      <UserInput />
+      <FormUser onAddUser={addUserHandler} />
     </>
   );
 };
