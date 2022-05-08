@@ -1,14 +1,19 @@
-import FormUser from './components/FormUser/FormUser';
+import { useState } from 'react';
+import FormUser from './components/Users/FormUser/FormUser';
+import UserList from './components/Users/UserList/UserList';
 
 const App = () => {
+  const [users, setUsers] = useState([]);
+
   const addUserHandler = userData => {
-    console.log(userData);
+    setUsers(prevUsers => [userData, ...prevUsers]);
   };
 
   return (
-    <>
+    <main>
       <FormUser onAddUser={addUserHandler} />
-    </>
+      <UserList users={users} />
+    </main>
   );
 };
 
