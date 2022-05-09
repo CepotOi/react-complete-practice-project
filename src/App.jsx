@@ -12,7 +12,7 @@ const App = () => {
   return (
     <main>
       <FormUser onAddUser={addUserHandler} />
-      <UserList users={users} />
+      {users.length > 0 && <UserList users={users} />}
     </main>
   );
 };
