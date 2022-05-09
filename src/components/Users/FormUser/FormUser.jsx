@@ -63,12 +63,12 @@ const FormUser = props => {
       <Card>
         <form onSubmit={formSubmitHandler}>
           <div className={styles['form-control']}>
-            <label htmlFor="__name">User Name</label>
-            <input type="text" id="__name" name="name" value={addUser.name} onChange={handleInputChange} />
+            <label htmlFor="__user_name">User Name</label>
+            <input type="text" id="__user_name" name="name" value={addUser.name} onChange={handleInputChange} />
           </div>
           <div className={styles['form-control']}>
-            <label htmlFor="__age">Age (Years)</label>
-            <input type="number" id="__age" name="age" value={addUser.age} onChange={handleInputChange} />
+            <label htmlFor="__user_age">Age (Years)</label>
+            <input type="number" id="__user_age" name="age" value={addUser.age} onChange={handleInputChange} />
           </div>
           <div className={styles['form-control__actions']}>
             <Button type="submit">Add User</Button>
