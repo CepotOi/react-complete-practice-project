@@ -6,6 +6,7 @@ import styles from './FormUser.module.css';
 
 const FormUser = props => {
   const INITIAL_STATE = {
+    id: '',
     name: '',
     age: ''
   };
@@ -44,6 +45,7 @@ const FormUser = props => {
     }
 
     const userInput = {
+      id: Math.round((Math.random() * 100) + Date.now()).toString(),
       name: addUser.name,
       age: parseInt(addUser.age)
     };

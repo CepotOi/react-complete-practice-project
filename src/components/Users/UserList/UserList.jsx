@@ -6,8 +6,8 @@ const UserList = ({ users }) => {
   return (
     <Card>
       <ul className={styles['user-list']}>
-        {users.map((user, key) => (
-          <li key={key}>
+        {users.map((user) => (
+          <li key={user.id}>
             <UserItem userItem={user} />
           </li>
         ))}
