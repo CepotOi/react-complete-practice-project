@@ -12,8 +12,7 @@ const FormUser = props => {
   };
 
   const [addUser, setAddUser] = useState(INITIAL_STATE);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [isModalShow, setIsModalShow] = useState(false);
+  const [error, setError] = useState(null);
 
   const resetState = () => {
     setAddUser(INITIAL_STATE);
@@ -33,14 +32,12 @@ const FormUser = props => {
     const userAge = addUser.age;
 
     if (userName.trim().length === 0 || userAge === '') {
-      setErrorMessage('Please fill out the form correctly!');
-      setIsModalShow(true);
+      setError({ title: 'Invalid Input', message: 'Please fill out all fields' });
       return;
     }
 
     if (userAge < 1) {
-      setErrorMessage('Age must be greater than 0!');
-      setIsModalShow(true);
+      setError({ title: 'Invalid Input', message: 'Age must be greater than 0' });
       return;
     }
 
@@ -56,8 +53,8 @@ const FormUser = props => {
 
   return (
     <>
-      {isModalShow && (
-        <Modal closeModal={() => setIsModalShow(false)} message={errorMessage} />
+      {error && (
+        <Modal closeModal={() => setError(null)} message={error.message} title={error.title} />
       )}
 
       <Card>

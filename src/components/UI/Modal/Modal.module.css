@@ -48,13 +48,3 @@
   float: right;
   margin-bottom: 15px;
 }
-
-.close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-}
