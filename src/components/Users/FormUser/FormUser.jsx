@@ -54,7 +54,7 @@ const FormUser = props => {
   return (
     <>
       {error && (
-        <Modal closeModal={() => setError(null)} message={error.message} title={error.title} />
+        <Modal onCloseModal={() => setError(null)} message={error.message} title={error.title} />
       )}
 
       <Card>

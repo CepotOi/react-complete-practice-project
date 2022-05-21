@@ -10,10 +10,10 @@ const App = () => {
   };
 
   return (
-    <main>
+    <>
       <FormUser onAddUser={addUserHandler} />
       {users.length > 0 && <UserList users={users} />}
-    </main>
+    </>
   );
 };
 
